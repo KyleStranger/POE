@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace KyleStranger.GADE6111.Task1
+{
+    public abstract class Weapon : Item
+    {
+        protected int damage;
+        public int getDamage() { return damage; }
+
+        protected int range;
+        public virtual int getRange() { return range; }
+
+        protected int durability;
+        public int getDurability() { return durability; }
+
+        protected int cost;
+        public int getCost() { return cost; }
+
+        protected string wType;
+        public string getType() { return wType; }
+
+        public Weapon(int x, int y, string symbol) : base(x, y)
+        {
+
+        }
+    }
+
+
+}
