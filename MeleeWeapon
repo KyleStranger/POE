@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace KyleStranger.GADE6111.Task1
+{
+    public class MeleeWeapon : Weapon
+    {
+        public enum Type
+        {
+            Dagger = 112,
+            Longsword = 113
+        };
+        public override int getRange()
+        {
+            return base.getRange();
+        }
+
+        public override string ToString()
+        {
+            throw new NotImplementedException();
+        }
+
+        public MeleeWeapon(int code, int x, int y) : base(x, y, "MW")
+        {
+            if (code == 112)
+            {
+                damage = 3;
+                range = 1;
+                durability = 10;
+                wType = "Dagger";
+                cost = 3;
+            }
+            else if (code == 113)
+            {
+                damage = 4;
+                range = 1;
+                durability = 6;
+                wType = "Longsword";
+                cost = 5;
+            }
+
+        }
+    }
+}
