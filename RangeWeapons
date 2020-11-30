@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace KyleStranger.GADE6111.Task1
+{
+    public class RangeWeapon : Weapon
+    {
+        public enum Type
+        {
+            Rifel = 211,
+            Longbow = 311
+        };
+        public override int getRange()
+        {
+            return base.getRange();
+        }
+
+        public override string ToString()
+        {
+            throw new NotImplementedException();
+        }
+
+        public RangeWeapon(int code, int x, int y) : base(x, y, "RW")
+        {
+            if (code == 211)
+            {
+                damage = 5;
+                range = 3;
+                durability = 3;
+                wType = "Rifel";
+                cost = 7;
+            }
+            else if (code == 311)
+            {
+                damage = 4;
+                range = 2;
+                durability = 4;
+                wType = "Longbow";
+                cost = 6;
+            }
+
+        }
+    }
+}
